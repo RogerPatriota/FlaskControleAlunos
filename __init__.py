@@ -2,6 +2,11 @@ from flask import Flask
 from .extensions import db, migrate
 from .routes.ucBp import ucBp
 
+'''
+    $env:FLASK_APP = "FlaskControleAlunos"
+    $env:FLASK_ENV = "development"
+'''
+
 def create_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
